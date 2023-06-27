@@ -1,0 +1,25 @@
+[project]
+name = "auto-correct-slack"
+version = "0.1.0"
+description = "Add a short description here"
+authors = [
+    { name = "hmirin", email = "hmirin@example.com" }
+]
+dependencies = [
+    "flask>=2.3.2",
+    "slack_sdk>=3.21.3",
+    "openai>=0.27.8",
+    "gunicorn>=20.1.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+
+[tool.hatch.metadata]
+allow-direct-references = true
