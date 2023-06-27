@@ -30,5 +30,6 @@ I'm prone to making spelling mistakes. I'm also a lazy person. So I made this bo
 
 # Deployment
 
+- You need to create and install Slack App to your workspace and get the user token (xoxp-...) and user ID (UXXXX...).
 - Use [fly.io](https://fly.io/) to deploy this bot.
 - Set the environment variables above in the fly.io's dashboard.
