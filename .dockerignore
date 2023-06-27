@@ -1,0 +1,6 @@
+fly.toml
+.venv
+.vscode
+__pycache__
+.envrc
+.python-version
