@@ -2,13 +2,15 @@
 
 A Slack bot that corrects your spelling mistakes automatically.
 
-# 
-
-
 AI will rewrite your message in seconds!
 
 ![demo_before](https://github.com/hmirin/SlackAutoCorrectionBot/assets/1284876/924a9e68-1f5c-4fb5-b119-32fa30a9f500)
 ![demo_after](https://github.com/hmirin/SlackAutoCorrectionBot/assets/1284876/c448c7a9-36b0-4c0d-8046-9b81a4f87f2a)
+
+See in action: 
+
+https://github.com/hmirin/SlackAutoCorrectionBot/assets/1284876/e64ba750-c12b-47e4-803c-089856fe4bd8
+
 
 I'm prone to making spelling mistakes. I'm also a lazy person. So I made this bot to correct my spelling mistakes automatically.
 
