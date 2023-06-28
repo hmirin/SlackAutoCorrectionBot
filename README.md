@@ -14,6 +14,7 @@ https://github.com/hmirin/SlackAutoCorrectionBot/assets/1284876/e64ba750-c12b-47
 
 I'm prone to making spelling mistakes. I'm also a lazy person. So I made this bot to correct my spelling mistakes automatically.
 
+See my blog post for [my experience using this bot](https://ykatayama.hashnode.dev/how-i-enhanced-my-typing-ability-with-llm)
 
 ## Environment Variables
 
