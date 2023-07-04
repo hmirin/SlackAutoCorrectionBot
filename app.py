@@ -27,6 +27,9 @@ slack_web_client = WebClient(token=SLACK_USER_TOKEN)
 FIX_MODE: FIX_MODE_TYPES = os.environ.get("FIX_MODE", "ALL_REPLACE")
 MARK_MODE: MARK_MODE_TYPES = os.environ.get("MARK_MODE", "ROBOT_ICON")
 
+ENABLE_FOR_DM = os.environ.get("ENABLE_FOR_DM", "1").lower() == "1"
+ENABLE_FOR_CHANNEL = os.environ.get("ENABLE_FOR_CHANNEL", "1").lower() == "1"
+
 
 def one_line_diff(str1, str2):
     diff = difflib.ndiff(str1, str2)
@@ -161,6 +164,12 @@ def slack_event():
             and "subtype" not in event
             and event.get("user") == SLACK_USER_ID
         ):
+            # ignore if bot is disabled for DM (not self DM)
+            if event.get("channel_type") == "im" and not ENABLE_FOR_DM:
+                return make_response("", 200)
+            # ignore if bot is disabled for channel
+            if event.get("channel_type") == "channel" and not ENABLE_FOR_CHANNEL:
+                return make_response("", 200)
             # silently mark not to trigger bot
             if "\u200b" in event.get("text"):
                 return make_response("", 200)
