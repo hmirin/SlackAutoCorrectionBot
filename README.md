@@ -35,4 +35,6 @@ See my blog post for [my experience using this bot](https://ykatayama.hashnode.d
 
 - You need to create and install Slack App to your workspace and get the user token (xoxp-...) and user ID (UXXXX...).
 - Use [fly.io](https://fly.io/) to deploy this bot.
-- Set the environment variables above in the fly.io's dashboard.
+  - Set env vars using `fly secrets set SLACK_USER_TOKEN=xxx` etc.
+  - Run `fly deploy`
+- Set the published URL of fly to Slack App's event subscription addr.
